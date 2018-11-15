@@ -53,7 +53,7 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
 // Filters Reducer
 
 const setTextFilter = (text = '') => ({
-  type: 'SET_TEXT',
+  type: 'SET_TEXT_FILTER',
   text,
 });
 
@@ -84,7 +84,7 @@ const filtersReducerDefaultState = {
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
   switch(action.type){
-    case 'SET_TEXT':
+    case 'SET_TEXT_FILTER':
       return {
         ...state,
         text: action.text
